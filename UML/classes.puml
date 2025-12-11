@@ -1,0 +1,44 @@
+@startuml
+
+class Cliente {
+    - nome: String
+    - cpf: String
+    - email: String
+    - telefone: String
+}
+
+class Peça {
+    - tipo: String
+    - servico: String
+    - preco: double
+}
+
+class Pedido {
+    - id: int
+    - listaPecas: List<Peça>
+    - valorTotal: double
+    - status: String
+    + adicionarPeca(p: Peça)
+    + calcularTotal(): double
+}
+
+class Atendente {
+    - usuario: String
+    - senha: String
+    + login(): boolean
+}
+
+class Sistema {
+    - clientes: List<Cliente>
+    - pedidos: List<Pedido>
+    + cadastrarCliente(c: Cliente)
+    + registrarPedido(p: Pedido)
+    + calcularTotal(p: Pedido)
+    + finalizarPedido(p: Pedido)
+}
+
+Cliente "1" --> "0..*" Pedido
+Pedido "1" --> "0..*" Peça
+Atendente --> Sistema
+
+@enduml

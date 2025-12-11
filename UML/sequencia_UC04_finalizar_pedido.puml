@@ -1,0 +1,21 @@
+@startuml
+actor Atendente
+actor Cliente
+participant "Sistema" as S
+
+S -> Atendente: Exibir pedido
+Atendente -> Cliente: Solicitar forma de pagamento
+Cliente -> Atendente: Informar pagamento
+Atendente -> S: Registrar forma de pagamento
+S -> S: Gerar cobrança
+
+alt Cliente não paga
+    S -> Atendente: Pagamento não concluído
+    stop
+end
+
+Cliente -> S: Efetuar pagamento
+S -> S: Confirmar recebimento
+S -> S: Atualizar status para concluído
+S -> Atendente: Pedido finalizado
+@enduml

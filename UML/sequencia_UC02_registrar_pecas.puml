@@ -1,0 +1,24 @@
+@startuml
+actor Atendente
+participant "Sistema" as S
+
+Atendente -> S: Inserir nome e CPF do cliente
+S -> S: Buscar cliente
+alt Cliente não encontrado
+    S -> Atendente: Exibir erro
+    Atendente -> S: Repetir CPF
+end
+
+loop Para cada peça
+    Atendente -> S: Selecionar tipo de peça
+    Atendente -> S: Selecionar serviço
+    Atendente -> S: Inserir preço unitário
+    S -> S: Registrar peça no pedido
+    S -> Atendente: Confirmar peça
+    Atendente -> S: Deseja adicionar outra peça?
+end
+
+Atendente -> S: Finalizar pedido
+S -> S: Salvar pedido completo
+S -> Atendente: Pedido finalizado
+@enduml

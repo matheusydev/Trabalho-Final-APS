@@ -1,0 +1,15 @@
+@startuml
+actor Atendente
+participant "Sistema" as S
+
+Atendente -> S: Selecionar "Cadastrar Cliente"
+S -> Atendente: Solicitar dados (nome, CPF, email, telefone)
+Atendente -> S: Enviar dados preenchidos
+S -> S: Validar dados
+alt Dados inválidos
+    S -> Atendente: Exibir erro
+    Atendente -> S: Reenviar dados
+end
+S -> S: Salvar cliente
+S -> Atendente: Confirmar cadastro
+@enduml

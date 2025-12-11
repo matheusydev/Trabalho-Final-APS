@@ -1,0 +1,12 @@
+@startuml
+actor Atendente
+participant "Sistema" as S
+
+Atendente -> S: Inserir usuário e senha
+S -> S: Validar credenciais
+alt Dados inválidos
+    S -> Atendente: Erro de login
+    stop
+end
+S -> Atendente: Acesso liberado
+@enduml

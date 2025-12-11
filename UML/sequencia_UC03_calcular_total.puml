@@ -1,0 +1,20 @@
+@startuml
+actor Atendente
+participant "Sistema" as S
+
+Atendente -> S: Inserir nome e CPF do cliente
+S -> S: Verificar cliente e buscar pedido
+alt Cliente não encontrado
+    S -> Atendente: Exibir erro
+    stop
+end
+alt Sem pedidos pendentes
+    S -> Atendente: Informar ausência de pedidos
+    stop
+end
+S -> Atendente: Exibir pedido
+
+Atendente -> S: Solicitar cálculo total
+S -> S: Calcular valor total
+S -> Atendente: Exibir total
+@enduml
