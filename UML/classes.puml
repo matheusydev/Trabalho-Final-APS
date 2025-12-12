@@ -1,5 +1,4 @@
 @startuml
-
 class Cliente {
     - nome: String
     - cpf: String
@@ -17,9 +16,14 @@ class Pedido {
     - id: int
     - listaPecas: List<Peça>
     - valorTotal: double
+    - valorFinal: double
+    - prazoDias: int
     - status: String
+    
     + adicionarPeca(p: Peça)
     + calcularTotal(): double
+    + calcularPrazoEntrega(): int      
+    + calcularDesconto(): double       
 }
 
 class Atendente {
@@ -31,10 +35,13 @@ class Atendente {
 class Sistema {
     - clientes: List<Cliente>
     - pedidos: List<Pedido>
+
     + cadastrarCliente(c: Cliente)
     + registrarPedido(p: Pedido)
     + calcularTotal(p: Pedido)
     + finalizarPedido(p: Pedido)
+    + gerarCodigoPedido(): String       
+    + historicoDePedidos(cpf: String): List<Pedido>   
 }
 
 Cliente "1" --> "0..*" Pedido
