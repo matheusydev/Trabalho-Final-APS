@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "cliente": {
+      "nome": "Matheus",
+      "cpf": "",
+      "email": "",
+      "telefone": "(86) 99595-2899"
+    },
+    "listaPecas": [
+      {
+        "tipo": "Camisa",
+        "servico": "Lavar",
+        "preco": 9.99
+      },
+      {
+        "tipo": "Toalha",
+        "servico": "Passar",
+        "preco": 7.49
+      },
+      {
+        "tipo": "Terno",
+        "servico": "Lavagem a seco",
+        "preco": 29.99
+      }
+    ],
+    "valorTotal": 47.47,
+    "valorFinal": 47.47,
+    "prazoDias": 4,
+    "status": "Pendente",
+    "dataCriacao": "2025-12-13T12:44:03.937Z"
+  },
+  {
+    "id": 2,
+    "cliente": {
+      "nome": "Maria Luiza Nascimento Moraes",
+      "cpf": "999.999.999-99",
+      "email": "",
+      "telefone": "(55) 94002-8922"
+    },
+    "listaPecas": [
+      {
+        "tipo": "casaco de pele de urso",
+        "servico": "lavar",
+        "preco": 499.99
+      }
+    ],
+    "valorTotal": 499.99,
+    "valorFinal": 499.99,
+    "prazoDias": 2,
+    "status": "Pendente",
+    "dataCriacao": "2025-12-13T13:29:37.424Z"
+  },
+  {
+    "id": 3,
+    "cliente": {
+      "nome": "Maria Luiza Nascimento Moraes",
+      "cpf": "99999999999",
+      "email": "",
+      "telefone": "(55) 94002-8922"
+    },
+    "listaPecas": [
+      {
+        "tipo": "Vestido do Flamengo ",
+        "servico": "Lavar e coloar o patch de 4 libertadores",
+        "preco": 1981.25
+      }
+    ],
+    "valorTotal": 1981.25,
+    "valorFinal": 1981.25,
+    "prazoDias": 2,
+    "status": "Pendente",
+    "dataCriacao": "2025-12-13T13:35:11.588Z"
+  }
+]

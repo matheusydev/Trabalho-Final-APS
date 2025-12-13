@@ -1,0 +1,14 @@
+# Node
+node_modules/
+Sistema/node_modules/
+
+# Next.js
+.next/
+Sistema/.next/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+
+# Ambiente
+.env
