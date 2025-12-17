@@ -10,5 +10,11 @@
     "cpf": "888.888.888-88",
     "email": "teste2@gmail.com",
     "telefone": "(88) 8888-8888"
+  },
+  {
+    "nome": "aline",
+    "cpf": "0000000000",
+    "email": "aline@gmail.com",
+    "telefone": "00000000000"
   }
 ]
