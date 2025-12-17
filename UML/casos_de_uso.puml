@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Atendente" as atendente
+actor "Cliente" as cliente
+actor "Sistema" as sistema
+
+rectangle "Sistema de Lavanderia" {
+    usecase "UC01 - Cadastrar Cliente" as UC01
+    usecase "UC02 - Registrar Peças e Serviços" as UC02
+    usecase "UC03 - Calcular Valor Total" as UC03
+    usecase "UC04 - Finalizar Pedido" as UC04
+    usecase "UC05 - Login no Sistema" as UC05
+    
+    usecase "Aplicar Desconto" as UC_Desconto
+}
+
+atendente --> UC01
+atendente --> UC02
+atendente --> UC04
+atendente --> UC05
+
+sistema --> UC03
+
+
+UC03 <.. UC_Desconto : <<include>>
+
+cliente --> UC04 : Realiza Pagamento
+
+@enduml
